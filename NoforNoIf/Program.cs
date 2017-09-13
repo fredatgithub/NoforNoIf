@@ -2,24 +2,28 @@
 
 namespace NoforNoIf
 {
-  internal class Program
+  internal static class Program
   {
-    public int I = 1;
+    private static int _i;
 
     private static void Main(string[] args)
     {
+      Action<string> display = Console.WriteLine;
+      display("Display all numbers from 1 to 100 without using for loop nor if");
+      _i = 1;
       SixtyFour();
       ThirtyTwo();
       Four();
+      display("Press any key to exit:");
       Console.ReadKey();
     }
 
-    private void One() { Console.WriteLine(I++); }
-    private void Two() { One(); One(); }
-    private void Four() { Two(); Two(); }
-    private void Eight() { Four(); Four(); }
-    private void Sixteen() { Eight(); Eight(); }
-    private void ThirtyTwo() { Sixteen(); Sixteen(); }
-    private void SixtyFour() { ThirtyTwo(); ThirtyTwo(); }
+    private static void One() { Console.WriteLine(_i++); }
+    private static void Two() { One(); One(); }
+    private static void Four() { Two(); Two(); }
+    private static void Eight() { Four(); Four(); }
+    private static void Sixteen() { Eight(); Eight(); }
+    private static void ThirtyTwo() { Sixteen(); Sixteen(); }
+    private static void SixtyFour() { ThirtyTwo(); ThirtyTwo(); }
   }
 }
