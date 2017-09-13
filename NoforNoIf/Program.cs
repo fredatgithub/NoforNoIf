@@ -1,25 +1,25 @@
 ﻿using System;
 
-
 namespace NoforNoIf
 {
-  class Program
+  internal class Program
   {
-    public int i = 1;
-    static void Main(string[] args)
+    public int I = 1;
+
+    private static void Main(string[] args)
     {
-      sixtyFour();
-      thirtyTwo();
-      four();
+      SixtyFour();
+      ThirtyTwo();
+      Four();
       Console.ReadKey();
     }
 
-    public static void one() { Console.WriteLine(i++); }
-    public void two() { one(); one(); }
-    public void four() { two(); two(); }
-    public void eight() { four(); four(); }
-    public void sixteen() { eight(); eight(); }
-    public void thirtyTwo() { sixteen(); sixteen(); }
-    public void sixtyFour() { thirtyTwo(); thirtyTwo(); }
+    private void One() { Console.WriteLine(I++); }
+    private void Two() { One(); One(); }
+    private void Four() { Two(); Two(); }
+    private void Eight() { Four(); Four(); }
+    private void Sixteen() { Eight(); Eight(); }
+    private void ThirtyTwo() { Sixteen(); Sixteen(); }
+    private void SixtyFour() { ThirtyTwo(); ThirtyTwo(); }
   }
 }
